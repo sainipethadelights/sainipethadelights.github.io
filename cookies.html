@@ -1,0 +1,52 @@
+<!-- COOKIE CONSENT -->
+<style>
+.cookie-consent{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:rgba(0,0,0,.95);
+  color:#fff;
+  display:none;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 18px;
+  z-index:9999;
+  font-size:14px;
+  font-family:Arial, sans-serif;
+}
+
+.cookie-consent a{
+  color:#f97316;
+  text-decoration:underline;
+}
+
+.cookie-consent button{
+  background:#f97316;
+  border:none;
+  padding:8px 16px;
+  border-radius:8px;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+</style>
+
+<div id="cookieConsent" class="cookie-consent">
+  <span>
+    This website uses cookies to improve your experience.
+    <a href="privacy-policy.html">Learn more</a>
+  </span>
+  <button id="acceptCookies">Accept</button>
+</div>
+
+<script>
+if(!localStorage.getItem("cookiesAccepted")){
+  document.getElementById("cookieConsent").style.display="flex";
+}
+
+document.getElementById("acceptCookies").onclick=function(){
+  localStorage.setItem("cookiesAccepted","true");
+  document.getElementById("cookieConsent").style.display="none";
+};
+</script>

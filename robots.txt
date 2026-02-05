@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sainipethadelights.ct.ws/sitemap.xml
