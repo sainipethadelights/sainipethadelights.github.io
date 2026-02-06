@@ -1,1 +1,7 @@
-
+git clone https://github.com/sainipetadelights/sainipetadelights.github.io.git
+cd sainipetadelights.github.io
+mkdir assets
+mv *.jpg *.png assets/
+git add .
+git commit -m "Move all images to assets folder"
+git push
